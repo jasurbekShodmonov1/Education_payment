@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_course_form" model="ir.ui.view">
+        <field name="name">course.form</field>
+        <field name="model">course.course</field>
+        <field name="arch" type="xml">
+            <form string="Course">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_course_tree" model="ir.ui.view">
+        <field name="name">course.tree</field>
+        <field name="model">course.course</field>
+        <field name="arch" type="xml">
+            <tree string="Courses">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Courses -->
+    <record id="action_course" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">course.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

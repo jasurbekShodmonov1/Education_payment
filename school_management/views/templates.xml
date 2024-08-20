@@ -1,0 +1,75 @@
+<odoo>
+    <!-- Education Background -->
+    <template id="education_background" name="Education Background">
+        <t t-call="website.layout">
+            <div class="background-education">
+                <h1>Welcome to the Education Center</h1>
+                <p>Empowering students with quality education and skills.</p>
+                <a href="/courses" class="btn btn-primary">Explore Courses</a>
+            </div>
+        </t>
+    </template>
+
+    <!-- Education Header -->
+    <template id="education_header" name="Education Header">
+        <t t-call="website.layout">
+            <header>
+                <div class="container">
+                    <h1>Education Center</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/courses">Courses</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </t>
+    </template>
+
+    <!-- Education Footer -->
+    <template id="education_footer" name="Education Footer">
+        <t t-call="website.layout">
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Education Center. All rights reserved.</p>
+                    <p>Contact us: <a href="mailto:info@educationcenter.com">info@educationcenter.com</a></p>
+                </div>
+            </footer>
+        </t>
+    </template>
+
+    <!-- Courses Section -->
+    <template id="courses_section" name="Courses Section">
+        <t t-call="website.layout">
+            <div class="courses-section">
+                <h2>Our Courses</h2>
+                <t t-foreach="courses" t-as="course">
+                    <div class="course-card">
+                        <h3 t-field="course.name"/>
+                        <p t-field="course.description"/>
+                        <a t-attf-href="/courses/#{course.id}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <!-- Teachers Section -->
+    <template id="teachers_section" name="Teachers Section">
+        <t t-call="website.layout">
+            <div class="teachers-section">
+                <h2>Our Teachers</h2>
+                <t t-foreach="teachers" t-as="teacher">
+                    <div class="teacher-card">
+                        <h3 t-field="teacher.name"/>
+                        <p t-field="teacher.bio"/>
+                        <a t-attf-href="/teachers/#{teacher.id}" class="btn btn-primary">Read More</a>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

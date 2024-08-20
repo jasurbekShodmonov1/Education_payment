@@ -1,0 +1,24 @@
+<odoo>
+    <!-- Main Menu for Education Center -->
+    <menuitem id="menu_education_center" name="Education Center" sequence="1"/>
+
+    <!-- Menu for Courses -->
+    <menuitem id="menu_course" name="Courses" parent="menu_education_center" sequence="10"/>
+    <menuitem id="menu_courses" name="Manage Courses" parent="menu_course" action="action_course" sequence="20"/>
+
+   <!-- Menu for Teachers -->
+    <menuitem id="menu_teacher" name="Teachers" parent="menu_education_center" sequence="30"/>
+    <menuitem id="menu_teachers" name="Manage Teachers" parent="menu_teacher" action="action_teacher" sequence="40"/>
+
+    <!-- Menu for Groups -->
+    <menuitem id="menu_group" name="Groups" parent="menu_education_center" sequence="50"/>
+    <menuitem id="menu_groups" name="Manage Groups" parent="menu_group" action="action_group" sequence="60"/>
+
+    <!-- Menu for Students -->
+    <menuitem id="menu_student" name="Students" parent="menu_education_center" sequence="70"/>
+    <menuitem id="menu_students" name="Manage Students" parent="menu_student" action="action_student" sequence="80"/>
+
+    <!-- Menu for Payments -->
+    <menuitem id="menu_payment" name="Payments" parent="menu_education_center" sequence="90"/>
+    <menuitem id="menu_payments" name="Manage Payments" parent="menu_payment" action="action_payment" sequence="100"/>
+</odoo>

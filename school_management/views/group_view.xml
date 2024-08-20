@@ -1,0 +1,41 @@
+<odoo>
+    <!-- Group Form View -->
+    <record id="view_group_form" model="ir.ui.view">
+        <field name="name">group.form</field>
+        <field name="model">course.group</field>
+        <field name="arch" type="xml">
+            <form string="Group">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="course_id"/>
+                        <field name="teacher_id"/>
+                        <field name="student_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Group Tree View -->
+    <record id="view_group_tree" model="ir.ui.view">
+        <field name="name">group.tree</field>
+        <field name="model">course.group</field>
+        <field name="arch" type="xml">
+            <tree string="Groups">
+                <field name="name"/>
+                <field name="course_id"/>
+                <field name="teacher_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action for Groups -->
+    <record id="action_group" model="ir.actions.act_window">
+        <field name="name">Groups</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">course.group</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
